@@ -18,14 +18,6 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
 import {GiftedChat} from 'react-native-gifted-chat';
 
 import {Dialogflow_V2} from 'react-native-dialogflow';
@@ -109,7 +101,7 @@ class App extends Component {
 styles = StyleSheet.create ({
   giftedchat: {
     flex: 1, 
-    backgroundColor: '#fff' 
+    backgroundColor: '#fff',
   }
 });
 
