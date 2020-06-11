@@ -1,0 +1,12 @@
+export const dialogflowConfig = {
+    type: "service_account",
+    project_id: "virtual-assistant-mcgs",
+    private_key_id: "493d8c314176b939dab36dcff108c90f8e23b9f3",
+    private_key: "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQDCOBDMzxyUZyqz\nvjNBYEnBqPWJbJMViO/uhNB5nk38Gh4m1UBIpNYwo/Egk0s593aWT5gpxj6X8eRR\ncuDl6MJhvT2VIqRo7fJAMT53Zep3YdfzQfQ5kG3gsznT1bco5jG84axW6ws4mDQe\nokxYsDjF9c+cHMexqly5OUAtqsKBCBBhXjcQwODcaoiUt4dIQcJAR8kXmkbrbkSb\nRy5r3y2iKtztrB5+zne8H23IHEGvzeSkq14s/5oSb1xmTLU2D0gXiiBC2PIBOy/y\nVXiNdwRnDWIEj+CmRcOiasrS2sm38z8fwYoSVi2AiFK1MgxdAyA38MeuEvUzOvq3\nx80XGTlJAgMBAAECgf8BI1L14EDKndAiPXsPZwEHoXXO2FQETEkbnKucCtFqKL0E\nfTtjMZQPtOY0yqgmLs0DFHRPylmTildMIuAueK6q4/D4bruH4d0Jg0Bacr5s9KXP\nRxOnQrFiH6q3Ewl/s9mWwbvAxp/KNRoZE9peqqmqf0Y4I/MHl3fzneJCYj3Bg8f0\n2KfkGYVgCjkuYxrw496UMs7H2qnJSzyitXgfqtBnYzrKGby48aGI7KhlKu2WhAAB\nivD3taOr5N5InWOBVH0HDwdP3YNWBxRUsfVba3m0BhHul0RrQIHfaw64O0rdmmAu\ncjyMHO2oE1FNpgq5XuLjmoFXFXOZTWMQMaI+e0cCgYEA9SJD8CuvkeBH8NZVFzIf\nvb6fcx04aJ/Po6bWHLx/wAi17uXY0sIPsFkK2UqMhbOB7D2m++Nb4yrHKmoUrvf1\nbyEuHthaQ2DvOLl6ng7q0ynYN+TuN3z87yVPSOOFcR0qmiJamYYWs/9s18qyKH5Y\nUa4MMqwXJWfYZaVeZJQNhmMCgYEAytQHHmQgU0cRx1YxjWxCXyC7rt7AxlLwAlMJ\n2O1qDCGzenokFJ3XywRJCJtYkFs89LUNYIU8IIyhaP8anG4a8UOnwidHNu6vugn+\n0ZNTcZKxMa7U/NCqvzR8v7398qyfdHEfnFCY9isf5PBE+ZhCojZL8/LKBfVlAVny\ncxoIC2MCgYBkTGvd1hIVLt5gpWHVhtXD7j4RfLA65sCvpjDPOzVOHoJKSFNKEMsY\njaZJuB39CrCrN6KeR62uKi+ppBPob15F5R6Y0k9EaGIZJJMOHu5oDiQA4rOxkntv\nYiWpniZYXOW0gT/utxWM+oLPXIk+1ktOyFcHWLBzxqSdGmef4ZATHwKBgDIu6Z/8\nV/8iy2RNkC8UhQtyVt16YanwJU/96abRfvaHdBeulrS/JQAnDEbj4LK+0EMfdLLX\n5DuNb/ZBf/0KRQJCogQoobcWsUXPaUvDLtcf21WWkz4GBukN/HuYb3eWfFFcF90e\nF+p4WwjS5c33fS0TUBGIlbGJuLbv4UvXOfxPAoGBAMCIneDlR889OC2TYy12RC0w\nSfiW/A4lgJltNQhsiBf1975U3pEwwXzP0BgkgJnLSoOEMQnp+3+ph46PnzyVXSPq\n7N/7E+MipAbFVhEtSNo9Rbkrd0XQr6ggP84lElIp3uZvXe/15rO5Vmp97HO633o9\n12tSDv46fA/8DmmuszL0\n-----END PRIVATE KEY-----\n",
+    client_email: "dialogflow-kcumav@virtual-assistant-mcgs.iam.gserviceaccount.com",
+    client_id: "108690606436599458585",
+    auth_uri: "https://accounts.google.com/o/oauth2/auth",
+    token_uri: "https://oauth2.googleapis.com/token",
+    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+    client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-kcumav%40virtual-assistant-mcgs.iam.gserviceaccount.com"
+};
