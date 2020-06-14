@@ -1,108 +1,35 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, { Component,useState } from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import SpeechToText from './SpeechToText'
 
-import React, {Component} from 'react';
-
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  Image,
-  StatusBar,
-} from 'react-native';
-
-import {GiftedChat} from 'react-native-gifted-chat';
-
-import {Dialogflow_V2} from 'react-native-dialogflow';
-
-import { dialogflowConfig } from './env';
-
-const BOT_USER = {
-  _id: 2,
-  name: 'Virtual Assistant',
-  avatar: 'https://media-exp1.licdn.com/dms/image/C4E0BAQERwqLK35zG0A/company-logo_200_200/0?e=2159024400&v=beta&t=jt9W4ycT0Y4g38R3gfjuGAtAzKrGfsx25YbszmHik0A',
-};
-
-class App extends Component {
-  state = {
-    messages: [
-      {
-        _id: 1,
-        text: `Hi! I am your virtual assistant from Dell Technologies.\n\nHow may I help you today?`,
-        createdAt: new Date(),
-        user: BOT_USER,
-      }
-    ]
-  };
-
-  onSend(messages = []) {
-    this.setState(previousState => ({
-      messages: GiftedChat.append(previousState.messages, messages)
-    }));
-
-    let message = messages[0].text;
-    Dialogflow_V2.requestQuery(
-      message,
-      result => this.handleGoogleResponse(result),
-      error => console.log (error)
-    )
-  }
-
-  componentDidMount() {
-    Dialogflow_V2.setConfiguration(
-      dialogflowConfig.client_email,
-      dialogflowConfig.private_key,
-      Dialogflow_V2.LANG_ENGLISH_US,
-      dialogflowConfig.project_id
-    );
-  }
-
-  handleGoogleResponse (result) {
-    let text = result.queryResult.fulfillmentMessages[0].text.text[0];
-    this.sendBotResponse (text);
-  }
-
-  sendBotResponse(text) {
-    let msg = {
-      _id: this.state.messages.length + 1,
-      text,
-      createdAt: new Date(),
-      user: BOT_USER
-    };
-
-    this.setState(previousState => ({
-      messages: GiftedChat.append(previousState.messages, [msg])
-    }));
-  }
-
-  render() {
-    return (
-      <View style={styles.giftedchat}>
-        <GiftedChat
-          messages={this.state.messages}
-          onSend={messages => this.onSend(messages)}
-          user={{
-            _id: 1
-          }}
-        />
-      </View>
-    );
-  }
-
-}
-
-styles = StyleSheet.create ({
-  giftedchat: {
-    flex: 1, 
-    backgroundColor: '#fff',
-  }
+const instructions = Platform.select({
+  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
+  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
 });
 
-export default App;
+export default class App extends Component {
+  render() {
+    return (
+	     // <UserInactivity
+    //   isActive={active}
+    //   timeForInactivity={timer}
+    //   onAction={isActive => { setActive(isActive); }}
+    //   style={{ flex: 1 }}>
+      <SpeechToText />
+    //  {/* { active?<AppContainer />:<Login/>} */}
+    //   {/* ///Comment this portion below if testing with login
+    // // <View>
+    // //   <MOApp style={styles.container} />
+    // // </View> */}
+    //</UserInactivity>
+  
+    );
+  }
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  }
+});
