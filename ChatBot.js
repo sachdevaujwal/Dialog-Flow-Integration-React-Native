@@ -8,6 +8,8 @@
 
 import React, {Component} from 'react';
 
+import './TextToSpeech';
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -31,16 +33,20 @@ const BOT_USER = {
 };
 
 class ChatBot extends Component {
-  state = {
-    messages: [
-      {
-        _id: 1,
-        text: `Hi! I am your virtual assistant from Dell Technologies.\n\nHow may I help you today?`,
-        createdAt: new Date(),
-        user: BOT_USER,
-      }
-    ]
+  constructor(props) {
+    super(props);
+    this.state = {
+      messages: [
+        {
+          _id: 1,
+          text: `Hi! I am your virtual assistant from Dell Technologies.\n\nHow may I help you today?`,
+          createdAt: new Date(),
+          user: BOT_USER,
+        }
+      ]
+    };
   };
+  
 
   onSend(messages = []) {
     this.setState(previousState => ({
@@ -51,6 +57,7 @@ class ChatBot extends Component {
     Dialogflow_V2.requestQuery(
       message,
       result => this.handleGoogleResponse(result),
+
       error => console.log (error)
     )
   }
@@ -62,10 +69,21 @@ class ChatBot extends Component {
       Dialogflow_V2.LANG_ENGLISH_US,
       dialogflowConfig.project_id
     );
+    this.setState({
+      messages: [
+        {
+          _id: 1,
+          text: `Hi! I am your virtual assistant from Dell Technologies.\n\nHow may I help you today?`,
+          createdAt: new Date(),
+          user: BOT_USER,
+        }
+      ]
+    })
   }
 
   handleGoogleResponse (result) {
     let text = result.queryResult.fulfillmentMessages[0].text.text[0];
+    console.log(text);
     this.sendBotResponse (text);
   }
 
@@ -80,19 +98,28 @@ class ChatBot extends Component {
     this.setState(previousState => ({
       messages: GiftedChat.append(previousState.messages, [msg])
     }));
+    this.props.fortextHandle(text)
   }
 
+  // reverseArray (messages) {
+  //   revMessages= this.state.messages.reverse();
+  // }
+
   render() {
+    console.log("n chatbot");
+    // console.log(this.state)
     return (
-      <View style={styles.giftedchat}>
+      // <View style={styles.giftedchat}>
+        
         <GiftedChat
           messages={this.state.messages}
           onSend={messages => this.onSend(messages)}
+          onPressActionButton = {()=>this.props.fortextHandle(this.state.messages)}
           user={{
             _id: 1
           }}
-        />
-      </View>
+         />    
+            // </View>
     );
   }
 

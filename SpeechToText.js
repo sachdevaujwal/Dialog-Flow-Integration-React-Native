@@ -10,7 +10,8 @@ import {
   AppRegistry,
   TouchableHighlight
 } from 'react-native';
-import Voice from 'react-native-voice';
+
+import {Voice} from '@react-native-community/voice';
 
 import playImage from './play.png'
 import pauseImage from './pause.png'

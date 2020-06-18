@@ -1,4 +1,16 @@
 rootProject.name = 'dialogflowdemo'
+include ':react-native-tts'
+project(':react-native-tts').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tts/android')
+include ':react-native-tts'
+project(':react-native-tts').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tts/android')
+include ':react-native-tts'
+project(':react-native-tts').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tts/android')
+include ':@react-native-community_voice'
+project(':@react-native-community_voice').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/voice/android')
+include ':@react-native-community_voice', ':app'
+project(':@react-native-community_voice').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/voice/android')
+include ':react-native-dialogflow'
+project(':react-native-dialogflow').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-dialogflow/android')
 include ':react-native-dialogflow'
 project(':react-native-dialogflow').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-dialogflow/android')
 include ':react-native-dialogflow'
