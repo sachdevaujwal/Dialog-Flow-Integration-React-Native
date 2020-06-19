@@ -135,7 +135,7 @@ export default class YourComponent extends Component {
         <Text style={styles.label}>{`Selected Voice: ${this.state
           .selectedVoice || ""}`}</Text> */}
 
-        {/* <View style={styles.sliderContainer}>
+        <View style={styles.sliderContainer}>
           <Text
             style={styles.sliderLabel}
           >{`Speed: ${this.state.speechRate.toFixed(2)}`}</Text>
@@ -159,7 +159,7 @@ export default class YourComponent extends Component {
             value={this.state.speechPitch}
             onSlidingComplete={this.setSpeechPitch}
           />
-        </View> */}
+        </View>
 
         {/* <TextInput
           style={styles.textInput}
